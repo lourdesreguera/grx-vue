@@ -1,26 +1,25 @@
 <script setup>
-import { RouterLink } from 'vue-router';
+import { RouterLink } from 'vue-router'
 </script>
-
 
 <template>
   <nav>
     <ul>
       <li class="li--home">
-        <RouterLink to="/">
-          GRX metal y madera
-        </RouterLink>
+        <RouterLink to="/"> GRX metal y madera </RouterLink>
       </li>
-      <li class='li--contact'>
-        <RouterLink to="/contact">
-          Contact
-        </RouterLink>
-        <img src='@/assets/images/smallArrow.svg' width='16' height='18' alt="Ir a contacto" class='contact__icon' />
+      <li class="li--contact">
+        <RouterLink to="/contact"> Contact </RouterLink>
+        <img
+          src="@/assets/images/smallArrow.svg"
+          width="16"
+          height="18"
+          alt="Ir a contacto"
+          class="contact__icon"
+        />
       </li>
       <li>
-        <RouterLink to="/about">
-          About
-        </RouterLink>
+        <RouterLink to="/about"> About </RouterLink>
       </li>
     </ul>
   </nav>
@@ -60,10 +59,6 @@ ul {
     padding: 2.5rem 4rem;
   }
 }
-
-
-
-
 
 /* nav a.router-link-exact-active {
   color: var(--color-text);

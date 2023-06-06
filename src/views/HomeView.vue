@@ -1,7 +1,6 @@
 <script setup>
-import { RouterLink } from 'vue-router';
-import NavComponent from '../components/NavComponent.vue';
-
+import { RouterLink } from 'vue-router'
+import NavComponent from '../components/NavComponent.vue'
 </script>
 
 <template>
@@ -9,16 +8,20 @@ import NavComponent from '../components/NavComponent.vue';
     <header>
       <NavComponent />
     </header>
-    <div class='container__img'>
-      <h1 class='heading'>GRX</h1>
-      <img alt="Miguel Muñoz Gordo" class="img" src="@/assets/images/miguel.png" width="216" height="323" />
-      <h2 class='subheading'>
-        Metal y madera
-      </h2>
+    <div class="container__img">
+      <h1 class="heading">GRX</h1>
+      <img
+        alt="Miguel Muñoz Gordo"
+        class="img"
+        src="@/assets/images/miguel.png"
+        width="216"
+        height="323"
+      />
+      <h2 class="subheading">Metal y madera</h2>
     </div>
-    <div class='container__more'>
+    <div class="container__more">
       <RouterLink to="/gallery">
-        <img src="@/assets/images/bigArrow.svg" alt="Ver últimos trabajos" class="arrow">
+        <img src="@/assets/images/bigArrow.svg" alt="Ver últimos trabajos" class="arrow" />
       </RouterLink>
       <h3>Últimos trabajos</h3>
     </div>
@@ -27,7 +30,7 @@ import NavComponent from '../components/NavComponent.vue';
 
 <style scoped>
 .container {
-  background-image: url("@/assets/images/bcg.webp");
+  background-image: url('@/assets/images/bcg.webp');
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -94,7 +97,7 @@ h3 {
   }
 
   .container__more {
-    padding-left: 4rem
+    padding-left: 4rem;
   }
 
   .heading {
@@ -116,7 +119,6 @@ h3 {
     font-size: 1.5rem;
   }
 }
-
 
 @media (min-width: 1440px) {
   .subheading {
