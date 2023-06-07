@@ -1,7 +1,11 @@
 <script setup>
 import NavComponent from '@/components/NavComponent.vue'
 import GalleryComponent from '@/components/GalleryComponent.vue';
+import GalleryDetail from '@/components/GalleryDetail.vue';
 import items1 from '@/components/items1.js'
+import items2 from '@/components/items2.js'
+import itemDetail from '@/components/itemsDetail.js'
+import FooterComponent from '../components/FooterComponent.vue';
 </script>
 
 <template>
@@ -11,9 +15,10 @@ import items1 from '@/components/items1.js'
     <main class="container">
         <h1>Últimos trabajos</h1>
         <GalleryComponent :items="items1" />
-        <!-- <Detail /> -->
-        <!-- <MasonryLayout items={items2} /> -->
+        <GalleryDetail :item="itemDetail[0]" />
+        <GalleryComponent :items="items2" />
     </main>
+    <FooterComponent />
 </template>
 
 <style scoped>

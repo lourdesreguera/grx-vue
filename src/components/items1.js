@@ -9,7 +9,6 @@ const items = [
     longDescription:
       "Descripción un poco más larga del producto para resaltar detalles",
     whiteBcg: false,
-    priority: true
   },
   {
     id: 2,

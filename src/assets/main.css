@@ -18,6 +18,7 @@ a {
   color: var(--fontsColor);
   text-decoration: none;
 }
+
 li {
   list-style: none;
 }

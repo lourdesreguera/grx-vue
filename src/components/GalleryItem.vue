@@ -11,7 +11,7 @@ defineProps({
   <div class='container'>
     <img :src='src' :alt='src' class="img" />
     <div class='btn'>
-      <RouterLink :to="`/gallery/${id}`" >
+      <RouterLink :to="`/gallery/${id}`" class="btn__img">
           <img src='@/assets/images/viewMoreArrow.png' alt="Ver más" width='34' height='34'/>
         </RouterLink>
     </div>
@@ -28,9 +28,8 @@ defineProps({
   position: relative;
 }
 
-
 .btn {
-  background-color: var(--bcgColor);
+  background-color: var(--color-background);
   position: absolute;
   bottom: 4px;
   width: 40px;
@@ -47,11 +46,6 @@ defineProps({
   align-items: flex-end;
   justify-content: flex-end;
 }
-
-.container__img {
-  position: relative;
-}
-
 </style>
 
 
