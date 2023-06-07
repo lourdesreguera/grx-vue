@@ -2,10 +2,15 @@
 import NavComponent from '@/components/NavComponent.vue'
 import GalleryComponent from '@/components/GalleryComponent.vue'
 import GalleryDetail from '@/components/GalleryDetail.vue'
-import items1 from '@/components/items1.js'
-import items2 from '@/components/items2.js'
 import itemDetail from '@/components/itemsDetail.js'
 import FooterComponent from '../components/FooterComponent.vue'
+import { useProductsStore } from '@/stores/products.js'
+
+const store = useProductsStore()
+const { items } = store
+
+const items1 = items.slice(0, 5)
+const items2 = items.slice(5, 10)
 </script>
 
 <template>

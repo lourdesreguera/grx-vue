@@ -7,7 +7,7 @@ const links = [
 </script>
 
 <template>
-  <footer class="container">
+  <footer class="footer">
     <div v-for="link in links" :key="link.name">
       <a :href="link.href" class="link">
         <img :src="`src/assets/images/${link.img}`" :alt="link.name" />
@@ -18,7 +18,7 @@ const links = [
 </template>
 
 <style scoped>
-.container {
+.footer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,7 +38,7 @@ const links = [
 }
 
 @media (min-width: 1024px) {
-  .container {
+  .footer {
     margin: 7rem 0 3rem 0;
   }
 
