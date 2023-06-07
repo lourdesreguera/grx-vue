@@ -1,5 +1,5 @@
 <script setup>
-import { RouterLink } from 'vue-router';
+import { RouterLink } from 'vue-router'
 
 defineProps({
   src: String,
@@ -8,12 +8,12 @@ defineProps({
 </script>
 
 <template>
-  <div class='container'>
-    <img :src='src' :alt='src' class="img" />
-    <div class='btn'>
+  <div class="container">
+    <img :src="src" :alt="src" class="img" />
+    <div class="btn">
       <RouterLink :to="`/gallery/${id}`" class="btn__img">
-          <img src='@/assets/images/viewMoreArrow.png' alt="Ver más" width='34' height='34'/>
-        </RouterLink>
+        <img src="@/assets/images/viewMoreArrow.png" alt="Ver más" width="34" height="34" />
+      </RouterLink>
     </div>
   </div>
 </template>
@@ -47,5 +47,3 @@ defineProps({
   justify-content: flex-end;
 }
 </style>
-
-
