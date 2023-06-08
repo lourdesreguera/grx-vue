@@ -16,6 +16,7 @@ const { findItem } = store
 const item = ref({})
 
 watchEffect(() => {
+  window.scrollTo(0, 0)
   if (id.value) {
     item.value = findItem(id.value)
   }
@@ -47,11 +48,13 @@ watchEffect(() => {
     </div>
   </section>
   <section class="container__images">
-    <div class="container__img">
+    <div class="container__img1">
       <img :src="item.src" class="img" />
     </div>
-    <div class="container__img">
+    <div class="container__img2">
       <img :src="item.src" class="img" />
+    </div>
+    <div class="container__img3">
       <img :src="item.src" class="img" />
     </div>
   </section>
@@ -68,15 +71,15 @@ watchEffect(() => {
 }
 
 .icon {
-  margin-top: 3rem;
-  margin-left: 4rem;
+  margin-top: 2rem;
+  margin-left: 1rem;
   rotate: 180deg;
 }
 
 .container__headings {
   position: absolute;
-  margin: 2rem 0 0 4rem;
-  max-width: 42rem;
+  margin: 1rem 0 0 1rem;
+  max-width: 15rem;
 }
 
 .heading {
@@ -87,11 +90,12 @@ watchEffect(() => {
 .subheading {
   font-family: 'Titillium Light';
   font-size: 2rem;
+  margin-top: 0.5rem;
 }
 
 .description {
   font-family: 'Titillium Light';
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .dark {
@@ -102,26 +106,43 @@ watchEffect(() => {
   position: absolute;
   bottom: 0;
   right: 0;
-  margin: 0 4rem 4rem 0;
-  max-width: 29rem;
+  margin: 0 1rem 2rem 0;
+  max-width: 12rem;
 }
 
 .container__images {
-  display: flex;
-  max-width: 800px;
-  overflow: hidden;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 150px);
+  column-gap: 0;
+  row-gap: 0;
+  max-width: 600px;
+  margin: 2rem auto;
 }
 
-.container__img {
-  width: 50%;
+.container__img1 {
+  grid-column: 1 / 1;
+  grid-row: 1 / 3;
+  overflow: hidden;
+}
+
+.container__img2 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  overflow: hidden;
+}
+
+.container__img3 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  overflow: hidden;
 }
 
 .img {
+  height: 100%;
   width: 100%;
-  overflow: hidden;
+  object-fit: cover;
 }
-
 
 @keyframes in-circle-swoop {
   from {
@@ -138,11 +159,55 @@ watchEffect(() => {
   animation-name: in-circle-swoop;
 }
 
+@media (min-width: 768px) {
+  .container__images {
+    grid-template-rows: repeat(2, 200px);
+    max-width: 700px;
+    margin: 4rem auto;
+  }
+  .container__headings {
+  margin: 2rem 0 0 3rem;
+  max-width: 42rem;
+}
+.icon {
+  margin-top: 2rem;
+  margin-left: 3rem;
+}
+.container__description {
+  margin: 0 2rem 3rem 0;
+  max-width: 20rem;
+}
+}
+
 @media (min-width: 1024px) {
 
   .heading,
   .subheading {
     font-size: 4rem;
+  }
+
+  .description {
+    font-family: 'Titillium Light';
+    font-size: 1.5rem;
+  }
+
+  .container__description {
+    margin: 0 4rem 4rem 0;
+    max-width: 29rem;
+  }
+
+  .container__headings {
+    margin: 2rem 0 0 4rem;
+  }
+
+  .icon {
+    margin-top: 3rem;
+    margin-left: 4rem;
+  }
+
+  .container__images {
+    max-width: 800px;
+    margin: 5rem auto;
   }
 }
 </style>
