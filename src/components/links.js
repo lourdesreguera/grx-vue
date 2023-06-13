@@ -10,6 +10,11 @@ import phoneIconDark from '@/assets/images/phoneIconDark.svg'
 export const links = [
   { href: '#', img: mailIcon, imgDark: mailIconDark, name: 'email@email.com', mail: true },
   { href: 'https://facebook.com', img: facebookIcon, imgDark: facebookIconDark, name: '@facebook' },
-  { href: 'https://instagram.com', img: instagramIcon, imgDark: instagramIconDark, name: '@instagram' },
+  {
+    href: 'https://instagram.com',
+    img: instagramIcon,
+    imgDark: instagramIconDark,
+    name: '@instagram'
+  },
   { href: '#', img: phoneIcon, imgDark: phoneIconDark, name: '123 45 67 89', phone: true }
 ]

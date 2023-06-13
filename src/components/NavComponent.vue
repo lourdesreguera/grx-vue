@@ -11,10 +11,10 @@ defineProps({
   <nav class="li--home">
     <ul>
       <li>
-        <RouterLink to="/gallery"> GRX metal y madera </RouterLink>
+        <RouterLink to="/gallery"> Galería </RouterLink>
       </li>
       <li class="li--contact">
-        <RouterLink to="/contact"> Contact </RouterLink>
+        <RouterLink to="/contact"> Contacto </RouterLink>
         <img
           src="@/assets/images/smallArrow.svg"
           width="16"
@@ -31,10 +31,10 @@ defineProps({
   <nav class="li--home--mobile">
     <ul>
       <li v-show="showHome">
-        <RouterLink to="/gallery"> GRX metal y madera </RouterLink>
+        <RouterLink to="/gallery"> Galería </RouterLink>
       </li>
       <li v-show="showContact" class="li--contact">
-        <RouterLink to="/contact"> Contact </RouterLink>
+        <RouterLink to="/contact"> Contacto </RouterLink>
         <img
           src="@/assets/images/smallArrow.svg"
           width="16"
