@@ -55,13 +55,13 @@ watchEffect(() => {
   </section>
   <section class="container__images">
     <div class="container__img1">
-      <img :src="item.src" class="img" />
+      <img :src="item.src" class="img" alt="item.title" />
     </div>
     <div class="container__img2">
-      <img :src="item.src" class="img" />
+      <img :src="item.src" class="img" alt="item.title" />
     </div>
     <div class="container__img3">
-      <img :src="item.src" class="img" />
+      <img :src="item.src" class="img" alt="item.title"/>
     </div>
   </section>
 </template>
