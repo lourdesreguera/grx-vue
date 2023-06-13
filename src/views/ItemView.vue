@@ -26,14 +26,18 @@ watchEffect(() => {
 </script>
 
 <template>
-  <section transition-style="in:custom:circle-swoop" class="container"
-    :style="{ backgroundImage: 'url(' + item.srcBigImage + ')' }">
+  <section
+    transition-style="in:custom:circle-swoop"
+    class="container"
+    :style="{ backgroundImage: 'url(' + item.srcBigImage + ')' }"
+  >
     <RouterLink to="/gallery">
-      <img :src="
-        !item.whiteBcg
-          ? smallArrow
-          : smallArrowDark.svg
-      " width="40" class="icon" alt="Volver a la galería" />
+      <img
+        :src="!item.whiteBcg ? smallArrow : smallArrowDark"
+        width="40"
+        class="icon"
+        alt="Volver a la galería"
+      />
     </RouterLink>
     <div class="container__headings">
       <h1 :class="!item.whiteBcg ? 'heading' : 'heading dark'">
@@ -168,21 +172,20 @@ watchEffect(() => {
     margin: 4rem auto;
   }
   .container__headings {
-  margin: 2rem 0 0 3rem;
-  max-width: 42rem;
-}
-.icon {
-  margin-top: 2rem;
-  margin-left: 3rem;
-}
-.container__description {
-  margin: 0 2rem 3rem 0;
-  max-width: 20rem;
-}
+    margin: 2rem 0 0 3rem;
+    max-width: 42rem;
+  }
+  .icon {
+    margin-top: 2rem;
+    margin-left: 3rem;
+  }
+  .container__description {
+    margin: 0 2rem 3rem 0;
+    max-width: 20rem;
+  }
 }
 
 @media (min-width: 1024px) {
-
   .heading,
   .subheading {
     font-size: 4rem;

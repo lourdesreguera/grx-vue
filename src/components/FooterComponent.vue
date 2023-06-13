@@ -1,20 +1,22 @@
 <script setup>
-import mailIcon from '@/assets/images/mailIcon.svg'
-import facebookIcon from '@/assets/images/facebookIcon.svg'
-import instagramIcon from '@/assets/images/instagramIcon.svg'
-
-const links = [
-  { href: '#', img: mailIcon, name: 'email@email.com' },
-  { href: '#', img: facebookIcon, name: '@facebook' },
-  { href: '#', img: instagramIcon, name: '@instagram' }
-]
+import { links } from '@/components/links.js'
 </script>
 
 <template>
   <footer class="footer">
     <div v-for="link in links" :key="link.name">
-      <a :href="link.href" class="link">
+      <a
+        v-show="!link.phone"
+        v-if="link.mail"
+        :href="`mailto:${link.ref}`"
+        class="link"
+        target="_blank"
+      >
         <img :src="link.img" :alt="link.name" />
+        <p class="name">{{ link.name }}</p>
+      </a>
+      <a v-show="!link.phone" v-else :href="link.href" class="link" target="_blank">
+        <img :src="link.img" :alt="link.name" class="img" />
         <p class="name">{{ link.name }}</p>
       </a>
     </div>

@@ -15,7 +15,7 @@ const items2 = items.slice(5, 10)
 
 <template>
   <header>
-    <NavComponent />
+    <NavComponent showContact showAbout />
   </header>
   <main class="container">
     <h1>Últimos trabajos</h1>
@@ -37,6 +37,7 @@ h1 {
   font-family: 'Titillium Bold';
   text-align: center;
   padding: 2.5rem 2rem;
+  text-transform: uppercase;
 }
 
 @media (min-width: 1024px) {
