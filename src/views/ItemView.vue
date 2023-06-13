@@ -2,6 +2,8 @@
 import { onMounted, ref, watchEffect } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
 import { useProductsStore } from '@/stores/products.js'
+import smallArrow from '@/assets/images/smallArrow.svg'
+import smallArrowDark from '@/assets/images/smallArrowDark.svg'
 
 const id = ref('')
 const route = useRoute()
@@ -29,8 +31,8 @@ watchEffect(() => {
     <RouterLink to="/gallery">
       <img :src="
         !item.whiteBcg
-          ? '/src/assets/images/smallArrow.svg'
-          : '/src/assets/images/smallArrowDark.svg'
+          ? smallArrow
+          : smallArrowDark.svg
       " width="40" class="icon" alt="Volver a la galería" />
     </RouterLink>
     <div class="container__headings">
