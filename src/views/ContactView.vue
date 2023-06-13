@@ -23,7 +23,7 @@ import { links } from '@/components/links.js'
           <img :src="link.imgDark" :alt="link.name" />
           <p>{{ link.name }}</p>
         </a>
-        <a v-else :href="link.ref" target="_blank">
+        <a v-else :href="link.href" target="_blank">
           <img :src="link.imgDark" :alt="link.name" />
           <p>{{ link.name }}</p>
         </a>
