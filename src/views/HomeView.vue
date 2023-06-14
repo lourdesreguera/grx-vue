@@ -19,12 +19,12 @@ import NavComponent from '../components/NavComponent.vue'
       />
       <h2 class="subheading">Metal y madera</h2>
     </div>
-    <div class="container__more">
-      <RouterLink to="/gallery">
+    <RouterLink to="/gallery">
+      <div class="container__more">
         <img src="@/assets/images/bigArrow.svg" alt="Ver últimos trabajos" class="arrow" />
-      </RouterLink>
-      <h3>Últimos trabajos</h3>
-    </div>
+        <h3>Últimos trabajos</h3>
+      </div>
+    </RouterLink>
   </div>
 </template>
 
