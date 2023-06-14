@@ -6,7 +6,7 @@ import NavComponent from '../components/NavComponent.vue'
 <template>
   <div class="container">
     <header>
-      <NavComponent />
+      <NavComponent showContact showAbout />
     </header>
     <div class="container__img">
       <h1 class="heading">GRX</h1>

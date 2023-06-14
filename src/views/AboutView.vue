@@ -59,6 +59,7 @@ p {
   max-width: 700px;
   padding: 0 1.5rem;
   text-align: center;
+  line-height: 1.2rem;
 }
 
 h1 {

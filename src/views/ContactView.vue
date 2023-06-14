@@ -51,6 +51,7 @@ h2 {
   font-size: 1rem;
   line-height: 1rem;
   text-align: center;
+  line-height: 1.2rem;
 }
 
 p {
