@@ -53,15 +53,17 @@ watchEffect(() => {
       </p>
     </div>
   </section>
-  <section class="container__images">
-    <div class="container__img1">
-      <img :src="item.src" class="img" alt="item.title" />
-    </div>
-    <div class="container__img2">
-      <img :src="item.src" class="img" alt="item.title" />
-    </div>
-    <div class="container__img3">
-      <img :src="item.src" class="img" alt="item.title"/>
+  <section class="container__section">
+    <div class="container__images">
+      <div class="container__img1">
+        <img :src="item.src" class="img" alt="item.title" />
+      </div>
+      <div class="container__img2">
+        <img :src="item.src" class="img" alt="item.title" />
+      </div>
+      <div class="container__img3">
+        <img :src="item.src" class="img" alt="item.title" />
+      </div>
     </div>
   </section>
 </template>
@@ -116,6 +118,13 @@ watchEffect(() => {
   max-width: 12rem;
 }
 
+.container__section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .container__images {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -123,7 +132,6 @@ watchEffect(() => {
   column-gap: 0;
   row-gap: 0;
   max-width: 600px;
-  margin: 2rem auto;
 }
 
 .container__img1 {
@@ -171,14 +179,17 @@ watchEffect(() => {
     max-width: 700px;
     margin: 4rem auto;
   }
+
   .container__headings {
     margin: 2rem 0 0 3rem;
     max-width: 42rem;
   }
+
   .icon {
     margin-top: 2rem;
     margin-left: 3rem;
   }
+
   .container__description {
     margin: 0 2rem 3rem 0;
     max-width: 20rem;
